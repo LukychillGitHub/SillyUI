@@ -254,7 +254,6 @@ body {
   height: 120px;
   background-image: url('cat.png');
   background-size: cover;
-  z-index: 1000;
 }
 
 .eye {
@@ -297,6 +296,5 @@ body {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
-  z-index: 1000;
   user-select: none;
 }
