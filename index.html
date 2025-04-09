@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Silly UI - Lukychill</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="darkMode">
+    <button id="darkModeBtn">Dark Mode</button>
+    <button id="lightModeBtn">Light Mode</button>
+    <audio id="breakSound" src="glass-break.mp3" preload="auto"></audio>
+    <div id="string"></div>
+    <div id="lamp"></div>
+    <div id="stone" draggable="true"></div>
+    <div id="blackout"></div>
+  </div>
+
+  <header class="navbar">
+    <h1 class="title">Silly UI</h1>
+    <div class="nav-buttons">
+      <button id="loginBtn">🔐 Login</button>
+      <button id="langBtn">🌍</button>
+      <button id="reviewBtn">📝 Review</button>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section id="bio" class="bio-section">
+      <div class="bio-card">
+        <img src="perfil.jpeg" alt="Foto de Lucas Román Fernández" class="bio-photo" />
+        <div class="bio-text">
+          <h2>About Me</h2>
+        <p>
+        Hi, my name is <strong>Lucas Román Fernández</strong>, a student at the <strong>Universidad del Salvador</strong> in Argentina. I’m currently studying <strong>Computer Engineering</strong>, and this project is part of a creative and experimental UI challenge.
+        </p>
+      <p class="silly-note">
+        Why so serious? Well... until you click something. 👀
+      </p>
+    </div>
+    <button class="silly-button" onclick="alert('Yes, I wrote this myself 🫣')">Verify this info ✅</button>
+  </div>
+</section>
+
+<section>
+  <button id="screamBtn">DO NOT TOUCH</button>
+  <audio id="screamSound" src="scream.mp3"></audio>
+</section>
+
+<section>
+  <div id="cat">
+    <div class="eye left-eye">
+      <div class="pupil"></div>
+    </div>
+    <div class="eye right-eye">
+      <div class="pupil"></div>
+    </div>
+  </div>
+  
+</section>
+
+<section>
+  <div id="balloonButton" title="¡Inflame con precaución!">🎈</div>
+  <audio id="balloonPopSound" src="pop.mp3" preload="auto"></audio>
+  
+</section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

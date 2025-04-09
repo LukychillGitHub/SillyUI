@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Selector</title>
+  <link rel="stylesheet" href="language.css" />
+</head>
+<body>
+  <div class="darkMode">
+    <button id="darkModeBtn">Dark Mode</button>
+    <button id="lightModeBtn">Light Mode</button>
+    <audio id="breakSound" src="glass-break.mp3" preload="auto"></audio>
+    <div id="string"></div>
+    <div id="lamp"></div>
+    <div id="stone" draggable="true"></div>
+    <div id="blackout"></div>
+  </div>
+  
+  <header>
+    <h1 id="title">Silly UI</h1>
+    <div class="menu">
+      <button id="backBtn">🏠 Back</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <!-- Mensaje de idioma seleccionado va acá -->
+      <div id="result" class="fade-in message"></div>
+
+      <!-- Contenedor de la ruleta -->
+      <div class="wheel-container">
+        <div class="pointer"></div>
+        <div id="wheel" class="wheel">
+          <img src="https://flagcdn.com/w40/gb.png" class="flag" style="--angle: 0deg" />
+          <img src="https://flagcdn.com/w40/es.png" class="flag" style="--angle: 72deg" />
+          <img src="https://flagcdn.com/w40/fr.png" class="flag" style="--angle: 144deg" />
+          <img src="https://flagcdn.com/w40/de.png" class="flag" style="--angle: 216deg" />
+          <img src="https://flagcdn.com/w40/it.png" class="flag" style="--angle: 288deg" />
+        </div>
+      </div>
+
+      <!-- Historia -->
+      <div id="history" class="fade-in history"></div>
+    </div>
+  </main>
+
+  <script src="language.js"></script>
+</body>
+</html>
