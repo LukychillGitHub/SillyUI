@@ -213,11 +213,12 @@ body {
 }
 
 .bio-photo {
+  margin-top: 30px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 70%;
   object-fit: cover;
-  border: 4px solid #555;
+  border: 2px solid #5555a2a2;
 }
 
 .bio-text h2 {
@@ -329,4 +330,62 @@ z-index: 1260;}
 
 .bio-text ul li {
   margin-bottom: 0.8rem;
+}
+
+/* RESPONSIVE MOBILE FIXES */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .title {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .nav-buttons {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .bio-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-text {
+    min-width: 100%;
+  }
+
+  .project-photo,
+  .bio-photo {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .silly-button {
+    margin-top: 2rem;
+  }
+
+  #screamBtn {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-top: 40px;
+  }
+
+  #balloonButton {
+    bottom: 100px;
+    right: 20px;
+  }
+
+  #cat {
+    left: 10px;
+    bottom: 10px;
+    width: 80px;
+    height: 80px;
+  }
 }
