@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Silly UI - Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="darkMode">
+    <button id="darkModeBtn">Dark Mode</button>
+    <button id="lightModeBtn">Light Mode</button>
+    <audio id="breakSound" src="glass-break.mp3" preload="auto"></audio>
+    <div id="string"></div>
+    <div id="lamp"></div>
+    <div id="stone" draggable="true"></div>
+    <div id="blackout"></div>
+  </div>
+  
+  <header class="navbar">
+    <h1 class="title">Silly UI</h1>
+    <div class="nav-buttons">
+      <button onclick="location.href='index.html'">🏠 Back</button>
+    </div>
+  </header>
+
+  <div class="page-content">
+  <div class="login-container">
+    <h1 class="login-title">Login</h1>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+  </div>
+  </div>
+  <script src="login.js"></script>
+  <script src="confirmKey.js"></script>
+</body>
+</html>

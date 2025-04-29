@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leave a Review</title>
+  <link rel="stylesheet" href="review.css" />
+</head>
+<body>
+    <div class="darkMode">
+        <button id="darkModeBtn">Dark Mode</button>
+        <button id="lightModeBtn">Light Mode</button>
+        <audio id="breakSound" src="glass-break.mp3" preload="auto"></audio>
+        <div id="string"></div>
+        <div id="lamp"></div>
+        <div id="stone" draggable="true"></div>
+        <div id="blackout"></div>
+      </div>
+  
+    <header>
+    <h1>Silly UI - Reviews</h1>
+    <div class="menu">
+      <button id="backBtn">🏠 Back</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="review-box" id="reviewBox">
+      <!-- Mensajes se auto-escriben acá -->
+    </div>
+    <div class="input-area">
+      <input type="text" id="reviewInput" placeholder="Send us your review..." disabled />
+      <button id="sendBtn" disabled>Send</button>
+    </div>
+  </main>
+
+  <script src="review.js"></script>
+</body>
+</html>
+

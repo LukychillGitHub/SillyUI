@@ -1,0 +1,302 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: sans-serif;
+  transition: background 0.5s;
+}
+
+.silly-button {
+  width: 130px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.13);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+
+.silly-button:hover{
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.darkMode{
+  button {
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 100;
+    padding: 8px 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  
+  }
+  
+  #lightModeBtn {
+    background:rgb(216, 216, 216);
+    box-shadow: 0px 3px 10px rgba(250, 250, 250, 0.479);
+    border: none;
+    color: rgb(0, 0, 0);
+    display: none;
+    z-index: 201;
+  }
+  
+  #lamp {
+    width: 50px;
+    height: 67px;
+    background: rgba(255, 255, 125, 0.986);
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0px 8px 15px rgb(255, 255, 131);
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 1s ease;
+    z-index: 50;
+    display: none;
+  }
+  
+  #string {
+    width: 2px;
+    height: 100px;
+    background: black;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 3s ease;
+    z-index: 49;
+    display: none;
+  }
+  
+  .lamp-visible #lamp,
+  .lamp-visible #string {
+    display: block;
+    top: 50px;
+  }
+  
+  #stone {
+    width: 80px;
+    height: 80px;
+    background-image: url("rock.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    cursor: grab;
+    display: none;
+  }
+  
+  .lamp-visible #stone {
+    display: block;
+  }
+  
+  #blackout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 200;
+    display: none;
+  }
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 20px 40px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-buttons button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-buttons button:hover {
+  transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-buttons {
+  margin-left: auto;
+  display: flex;
+}
+
+#mainContent {
+  padding: 40px;
+}
+
+.bio-section {
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  background: #fdfdfd;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bio-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #555;
+}
+
+.bio-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.bio-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.silly-note {
+  font-style: italic;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* ScreamButton */
+#screamBtn {
+  background-color: red;
+  color: white;
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+  animation: shake 0.2s infinite;
+}
+
+#screamBtn:hover{
+  transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0px); }
+}
+
+/* CAT */
+
+#cat {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  background-image: url('cat.png');
+  background-size: cover;
+}
+
+.eye {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  top: 40px;
+  z-index: 1260;
+}
+
+.left-eye { left: 23px; 
+z-index: 1260;}
+.right-eye { right: 32px; 
+z-index: 1260;}
+
+.pupil {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  top: 9px;
+  left: 9px;
+  transition: all 0.05s ease;
+}
+
+/* Baloon */
+#balloonButton {
+  position: fixed;
+  bottom: 140px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: #ff5a5f;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  user-select: none;
+}

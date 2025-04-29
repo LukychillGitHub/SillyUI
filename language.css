@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    color: #222;
+  }
+  
+  .darkMode{
+    button {
+      font-size: 16px;
+      position: absolute;
+      top: 18px;
+      left: 250px;
+      z-index: 100;
+      padding: 8px 10px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    button:hover{
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    
+    }
+    
+    #lightModeBtn {
+      background:rgb(216, 216, 216);
+      box-shadow: 0px 3px 10px rgba(250, 250, 250, 0.479);
+      border: none;
+      color: rgb(0, 0, 0);
+      display: none;
+      z-index: 201;
+    }
+    
+    #lamp {
+      width: 50px;
+      height: 67px;
+      background: rgba(255, 255, 125, 0.986);
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0px 8px 15px rgb(255, 255, 131);
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: top 1s ease;
+      z-index: 50;
+      display: none;
+    }
+    
+    #string {
+      width: 2px;
+      height: 100px;
+      background: black;
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: top 3s ease;
+      z-index: 49;
+      display: none;
+    }
+    
+    .lamp-visible #lamp,
+    .lamp-visible #string {
+      display: block;
+      top: 50px;
+    }
+    
+    #stone {
+      width: 80px;
+      height: 80px;
+      background-image: url("rock.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      cursor: grab;
+      display: none;
+    }
+    
+    .lamp-visible #stone {
+      display: block;
+    }
+    
+    #blackout {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 200;
+      display: none;
+    }
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f1f1f;
+    color: white;
+    padding: 1rem 2rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .menu button {
+    background: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .menu button:hover {
+    background: #444;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: calc(100vh - 80px);
+    padding: 2rem 1rem;
+  }
+  
+  .content {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    margin-bottom: 4rem; /* más pegado a la ruleta */
+    margin-top: 1rem;     /* más cerca del top */
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  
+  
+  .history {
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+  }
+  
+  .wheel-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid #333;
+    position: relative;
+    transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: white;
+  }
+  
+  .flag {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 46%;
+    left: 43%;
+    transform-origin: center center;
+    transform: rotate(var(--angle)) translateY(-110px) rotate(calc(-1 * var(--angle)));
+  }
+  
+  .pointer {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid red;
+    z-index: 10;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
+  
